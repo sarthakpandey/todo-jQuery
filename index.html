@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      #addAlert {
+        display: none;
+      }
+
+      #sortAlert {
+        display: none;
+      }
+
+      #resetAlert {
+        display: none;
+      }
+
+      #clearAlert {
+        display: none;
+      }
+
+      .click {
+        visibility: visible;
+        height: auto;
+      }
+
+      li {
+        margin-bottom: 18px;
+        background-color: black;
+      }
+
+      .card {
+        transition: 2s;
+        color: rgb(26, 14, 14);
+      }
+
+      .done {
+        background-color: rgb(255, 243, 81);
+        text-decoration: line-through;
+        transition: 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      class="text-center my-5 mx-auto py-2 col-12 col-sm-10 col-md-8 col-lg-4 alert alert-primary text-muted shadow-lg"
+    >
+      <b> Creative Task Manager</b>
+    </h1>
+
+    <div class="input-group mx-auto col-lg-8 col-md-10 col-sm-12 mb-3">
+      <input
+        id="inputTask"
+        type="text"
+        class="form-control"
+        placeholder="Enter your task here!"
+        aria-describedby="button-addon4"
+      />
+      <div class="input-group-append" id="button-addon4">
+        <button id="add" class="btn btn-success shadow" type="button">
+          ADD
+        </button>
+        <button id="sort" class="btn btn-primary shadow" type="button">
+          SORT
+        </button>
+        <button id="reset" class="btn btn-secondary shadow" type="button">
+          RESET
+        </button>
+        <button id="clear" class="btn btn-dark shadow" type="button">
+          CLEAR ALL
+        </button>
+      </div>
+    </div>
+
+    <div>
+      <div
+        id="addAlert"
+        class="alert alert-success alert-dismissible col-8 mx-auto"
+      >
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"
+          >&times;</a
+        >
+        <strong>Success!</strong> Task has been added
+      </div>
+
+      <div
+        id="sortAlert"
+        class="alert alert-primary alert-dismissible col-8 mx-auto"
+      >
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"
+          >&times;</a
+        >
+        <strong>Success!</strong> List has been sorted
+      </div>
+
+      <div
+        id="resetAlert"
+        class="alert alert-warning alert-dismissible col-8 mx-auto"
+      >
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"
+          >&times;</a
+        >
+        <strong>Success!</strong> List has been reset
+      </div>
+
+      <div id="clearAlert" class="alert alert-dark alert-dismissible col-8 mx-auto">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"
+          >&times;</a
+        >
+        <strong>Success!</strong> List has been cleared
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <ul type="none" id="taskList" class="list-inline col-lg-10 col-md-12 col-sm-12 mx-auto">
+      <li class="list-inline-item shadow">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Sample Task</h5>
+            <button type="button" class="btn btn-outline-primary"><</button>
+            <button type="button" class="btn btn-outline-primary">></button>
+            <button type="button" class="btn btn-outline-success">Done</button>
+            <button type="button" class="btn btn-dark">Delete</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
